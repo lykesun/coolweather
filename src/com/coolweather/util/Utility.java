@@ -1,4 +1,4 @@
-package util;
+package com.coolweather.util;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -7,14 +7,15 @@ import java.util.Locale;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import model.City;
-import model.County;
-import model.Province;
+import com.coolweather.db.CoolWeatherDB;
+import com.coolweather.model.City;
+import com.coolweather.model.County;
+import com.coolweather.model.Province;
+
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.text.TextUtils;
-import db.CoolWeatherDB;
 
 public class Utility {
 
@@ -126,5 +127,12 @@ public class Utility {
 		editor.putString("publish_time", publishTime);
 		editor.putString("current_date", sdf.format(new Date()));
 		editor.commit();
+	}
+	public static boolean compareDate(String oldDate,String newDate){
+		boolean flag=false;
+		if(newDate.compareTo(oldDate)>0){
+			flag=true;
+		}
+		return false;
 	}
 }

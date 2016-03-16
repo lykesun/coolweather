@@ -27,13 +27,35 @@
             android:layout_alignParentRight="true"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:background="@drawable/refresh"/>
+            android:background="@drawable/reload"/>
+
+        
+
+        <Button
+            android:id="@+id/app_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/refresh_weather"
+            android:textColor="#FFF"
+            android:textSize="12sp"
+            android:text="退出" 
+            android:background="#484E61"/>
+
     </RelativeLayout>
     <RelativeLayout 
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:background="#27A5F9">
+        <Button
+            android:id="@+id/futrue_weather_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFF"
+            android:text="查看7天详细天气" 
+            android:background="#27A5F9"/>
+
         <TextView 
             android:id="@+id/publish_text"
             android:layout_width="wrap_content"
@@ -93,7 +115,27 @@
                     android:textColor="#FFF"
                     android:textSize="40sp"/>
             </LinearLayout>
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:textColor="#FFF"
+                android:textSize="12sp"
+                android:singleLine="false"
+                android:text="上述天气信息是错误的！！！请勿盲目相信\n请看下面的正确天气信息"/>
+            <TextView 
+                android:layout_marginTop="15dp"
+                android:id="@+id/correct_weather"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:textColor="#FFF"
+                android:textSize="24sp"
+                android:singleLine="false"/>
         </LinearLayout>
     </RelativeLayout>
 
+    
 </LinearLayout>
